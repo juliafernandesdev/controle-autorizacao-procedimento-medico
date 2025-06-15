@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+	<changeSet id="1" author="juliafernandesdev">
+	    <createTable tableName="procedimentos_autorizados">
+	        <column name="procedimento" type="INT"/>
+	        <column name="idade" type="INT"/>
+	        <column name="sexo" type="CHAR(1)"/>
+	        <column name="permitido" type="BOOLEAN"/>
+	    </createTable>
+	
+	    <insert tableName="procedimentos_autorizados">
+	        <column name="procedimento" value="1234"/>
+	        <column name="idade" value="10"/>
+	        <column name="sexo" value="M"/>
+	        <column name="permitido" value="false"/>
+	    </insert>
+	
+	    <insert tableName="procedimentos_autorizados">
+	        <column name="procedimento" value="4567"/>
+	        <column name="idade" value="20"/>
+	        <column name="sexo" value="M"/>
+	        <column name="permitido" value="true"/>
+	    </insert>
+	
+	    <insert tableName="procedimentos_autorizados">
+	        <column name="procedimento" value="6789"/>
+	        <column name="idade" value="10"/>
+	        <column name="sexo" value="F"/>
+	        <column name="permitido" value="false"/>
+	    </insert>
+	
+	    <insert tableName="procedimentos_autorizados">
+	        <column name="procedimento" value="6789"/>
+	        <column name="idade" value="10"/>
+	        <column name="sexo" value="M"/>
+	        <column name="permitido" value="true"/>
+	    </insert>
+	
+	    <insert tableName="procedimentos_autorizados">
+	        <column name="procedimento" value="1234"/>
+	        <column name="idade" value="20"/>
+	        <column name="sexo" value="M"/>
+	        <column name="permitido" value="true"/>
+	    </insert>
+	
+	    <insert tableName="procedimentos_autorizados">
+	        <column name="procedimento" value="4567"/>
+	        <column name="idade" value="30"/>
+	        <column name="sexo" value="F"/>
+	        <column name="permitido" value="true"/>
+	    </insert>
+	</changeSet>
+</databaseChangeLog>
