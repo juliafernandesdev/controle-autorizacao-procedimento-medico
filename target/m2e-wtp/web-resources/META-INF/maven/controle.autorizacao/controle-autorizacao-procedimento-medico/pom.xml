@@ -17,19 +17,26 @@
 
     <dependencies>
         <!-- API Servlet para compilar. Fornecida pelo Wildfly no runtime -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
-            <scope>provided</scope>
-        </dependency>
+       <dependency>
+		    <groupId>jakarta.servlet</groupId>
+		    <artifactId>jakarta.servlet-api</artifactId>
+		    <version>6.0.0</version> <!-- ou 5.0.0, ambos compatíveis -->
+		    <scope>provided</scope>
+		</dependency>
+
 
          <!-- JSTL compatível com javax.servlet -->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
+		    <groupId>jakarta.servlet.jsp.jstl</groupId>
+		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+		    <version>3.0.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.glassfish.web</groupId>
+		    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		    <version>3.0.1</version>
+		</dependency>
+
 
         <!-- Banco de dados H2 -->
         <dependency>
@@ -37,6 +44,12 @@
             <artifactId>h2</artifactId>
             <version>2.2.224</version>
         </dependency>
+        <!-- Banco de dados POSTGRESQL -->
+        <dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>42.7.3</version>
+		</dependency>
 
         <!-- Liquibase para controle de migrations -->
         <dependency>
@@ -52,9 +65,16 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.13.1</version>
+		</dependency>
     </dependencies>
 
     <build>
+    	<finalName>controle-autorizacao-procedimento-medico</finalName>
         <plugins>
             <!-- Compilador Java 17 -->
             <plugin>
@@ -71,6 +91,15 @@
                 <version>3.2.3</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <!-- Liquibase -->
+            <plugin>
+        		<groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>4.23.1</version>
+                <configuration>
+                    <propertyFile>src/main/resources/liquibase.properties</propertyFile>
                 </configuration>
             </plugin>
         </plugins>

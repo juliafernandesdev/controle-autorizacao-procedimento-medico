@@ -6,6 +6,9 @@
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 	<changeSet id="1" author="juliafernandesdev">
 	    <createTable tableName="procedimentos_autorizados">
+	     	<column name="id" type="INT" autoIncrement="true">
+	            <constraints primaryKey="true" nullable="false"/>
+	        </column>
 	        <column name="procedimento" type="INT"/>
 	        <column name="idade" type="INT"/>
 	        <column name="sexo" type="CHAR(1)"/>
