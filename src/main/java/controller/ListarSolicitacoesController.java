@@ -21,7 +21,8 @@ import dao.SolicitacaoAutorizacaoDAO;
 import model.SolicitacaoAutorizacao;
 
 /**
- * Servlet implementation class ListarSolicitacoesController
+ * Controlador responsável por buscar todos as solicitações de autorização que existem no banco de dados
+ * e retornar para a view de listagem do histórico de autorizações o resultado da busca. 
  */
 @WebServlet("/ListarSolicitacoesController")
 public class ListarSolicitacoesController extends HttpServlet {

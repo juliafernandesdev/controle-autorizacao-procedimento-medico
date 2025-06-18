@@ -55,8 +55,8 @@ services:
     image: postgres:17
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: seu_usuario_aqui
+      POSTGRES_PASSWORD: sua_enha_aqui
       POSTGRES_DB: autorizador_procedimentos
     ports:
       - "5432:5432"
@@ -136,8 +136,8 @@ mvn liquibase:updateSQL
 | --------- | -------------------------- |
 | Host      | localhost                  |
 | Porta     | 5432                       |
-| Usuário   | postgres                   |
-| Senha     | postgres                   |
+| Usuário   | seu_usuario_aqui           |
+| Senha     | sua_senha_aqui             |
 | Banco     | autorizador\_procedimentos |
 
 ---
@@ -153,12 +153,12 @@ mvn liquibase:updateSQL
 
 ## 📍 Endpoints (Front-end)
 
-| Caminho                            | Função                                             |  
-| ---------------------------------- | -------------------------------------------------- |
-| `/index.jsp`                       | Tela inicial                                       |
+| Caminho                                     | Função                                             |  
+| ------------------------------------------- | -------------------------------------------------- |
+| `/index.jsp`                             | Tela inicial                                       |
 | `/pages/solicitarAutorizacao.jsp`  | Formulário de solicitação de autorização           |
 | `/pages/historicoSolicitacoes.jsp` | Listagem do histórico de solicitações              |
-| `/pages/cadastrarNovaRegra.jsp`    | Cadastro de novas regras de autorização            |
+| `/pages/cadastrarNovaRegra.jsp`     | Cadastro de novas regras de autorização            |
 
 ---
 

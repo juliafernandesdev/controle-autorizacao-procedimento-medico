@@ -11,8 +11,20 @@ import java.util.List;
 import model.SolicitacaoAutorizacao;
 import util.DBConnection;
 
+
+
+/**
+ * DAO responsável pelo gerenciamento de solicitações de autorização de procedimentos médicos.
+ * Permite salvar novas solicitações e consultar o histórico armazenado.
+ */
 public class SolicitacaoAutorizacaoDAO {
 
+	/**
+     * Persiste uma nova solicitação de autorização no banco de dados.
+     *
+     * @param s o objeto {@link SolicitacaoAutorizacao} contendo os dados da solicitação
+     * @throws SQLException em caso de falha na inserção dos dados
+     */
 	 public void salvarSolicitacao(SolicitacaoAutorizacao s) throws SQLException {
 	        String sql = "INSERT INTO solicitacoes_autorizacao (procedimento, idade, sexo, autorizado, data) VALUES (?, ?, ?, ?, ?)";
 	        try (Connection conn = DBConnection.getConnection();
@@ -30,6 +42,12 @@ public class SolicitacaoAutorizacaoDAO {
 	        }
 	 }
 	 
+	 
+	 /**
+	     * Retorna uma lista com todas as solicitações de autorização registradas no sistema.
+	     *
+	     * @return lista de objetos {@link SolicitacaoAutorizacao} com os dados das solicitações
+	     */
 	 public List<SolicitacaoAutorizacao> listarTodasAsSolicitacoes() {
 		 
 	        List<SolicitacaoAutorizacao> lista = new ArrayList<>();

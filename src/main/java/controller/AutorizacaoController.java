@@ -19,7 +19,11 @@ import dao.SolicitacaoAutorizacaoDAO;
 import model.RegraAutorizacao;
 import model.SolicitacaoAutorizacao;
 
-
+/*
+ * Controlador responsável por buscar a regra de autorização do procedimento no banco de dados
+ * de acordo com a solicitação realizada, salvar a solicitação de autorização e retornar ao usuário
+ * se o procedimento foi autorizado, negado ou é inexistente.
+ */
 @WebServlet("/AutorizacaoController")
 public class AutorizacaoController extends HttpServlet {
 	 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

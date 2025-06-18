@@ -10,7 +10,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class SolicitarAutorizacaoController
+ * Controlador responsável por redirecionar para a página
+ * de solicitação de autorização de procedimento
  */
 @WebServlet("/SolicitarAutorizacaoController")
 public class SolicitarAutorizacaoController extends HttpServlet {

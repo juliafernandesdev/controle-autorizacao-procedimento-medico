@@ -9,7 +9,23 @@ import java.sql.SQLException;
 import model.RegraAutorizacao;
 import util.DBConnection;
 
+/**
+ * DAO responsável pelo acesso à tabela de regras de autorização de procedimentos médicos.
+ * Fornece operações para buscar e salvar regras de autorização com base em procedimento, idade e sexo.
+ */
 public class RegraAutorizacaoDAO {
+	
+	/**
+     * Busca uma regra de autorização específica para o procedimento informado,
+     * de acordo com idade e sexo.
+     *
+     * @param procedimento o código do procedimento
+     * @param idade        a idade do paciente
+     * @param sexo         o sexo do paciente ("M" ou "F")
+     * @return uma instância de {@link RegraAutorizacao} caso exista correspondência;
+     *         {@code null} se nenhuma regra for encontrada
+     * @throws SQLException caso ocorra erro na consulta ao banco de dados
+     */
 	public RegraAutorizacao buscarRegras(int procedimento, int idade, String sexo) throws SQLException {
 		 String sql = "SELECT * FROM procedimentos_autorizados WHERE procedimento = ? AND idade = ? AND sexo = ?";
         try (Connection conn = DBConnection.getConnection();
@@ -35,6 +51,12 @@ public class RegraAutorizacaoDAO {
         return null;
 	}
 	
+	
+	/**
+     * Salva uma nova regra de autorização na tabela de procedimentos autorizados.
+     *
+     * @param regra o objeto {@link RegraAutorizacao} contendo os dados a serem persistidos
+     */
 	public void salvarNovaRegra(RegraAutorizacao regra) {
 		
         String sql = "INSERT INTO procedimentos_autorizados (procedimento, idade, sexo, permitido) VALUES (?, ?, ?, ?)";

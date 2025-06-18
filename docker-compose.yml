@@ -5,8 +5,8 @@ services:
     image: postgres:17
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: seu_usuario_aqui
+      POSTGRES_PASSWORD: sua_senha_aqui
       POSTGRES_DB: autorizador_procedimentos
     ports:
       - "5432:5432"

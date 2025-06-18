@@ -11,7 +11,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import dao.RegraAutorizacaoDAO;
 import model.RegraAutorizacao;
 
-
+/*
+ * Controlador responsável por receber os parametros da tela de cadastro de nova regra
+ * de autorização de procedimento e inserir no banco de dados esta nova regra.
+ */
 @WebServlet("/CadastroRegraController")
 public class CadastroRegraController extends HttpServlet {
     @Override

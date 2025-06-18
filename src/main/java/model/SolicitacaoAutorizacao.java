@@ -2,6 +2,10 @@ package model;
 
 import java.time.LocalDateTime;
 
+/**
+ * Representa uma solicitação de autorização de procedimento médico feita por um usuário.
+ * Contém os dados da requisição e o resultado da autorização.
+ */
 public class SolicitacaoAutorizacao {
 	
 	private int id;

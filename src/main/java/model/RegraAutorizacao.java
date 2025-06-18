@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * Representa uma regra de autorização de procedimento médico
+ * com base em procedimento, idade, sexo e permissão.
+ */
 public class RegraAutorizacao {
 	
 	private int id;
