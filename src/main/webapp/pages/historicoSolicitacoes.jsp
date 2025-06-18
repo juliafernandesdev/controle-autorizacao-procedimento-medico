@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Solicitações Registradas</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="container py-5">
@@ -25,8 +26,12 @@
   </table>
 
   <div class="mt-4">
-    <a href="<%= request.getContextPath() %>/index.jsp" class="btn btn-secondary">⬅ Voltar ao Início</a>
-    <a href="<%= request.getContextPath() %>/pages/solicitarAutorizacao.jsp" class="btn btn-primary">➕ Nova Solicitação</a>
+    <a href="<%= request.getContextPath() %>/index.jsp" class="btn btn-secondary">
+    	<i class="bi bi-arrow-left me-1"></i> Voltar ao Início
+	</a>
+    <a href="<%= request.getContextPath() %>/pages/solicitarAutorizacao.jsp" class="btn btn-primary">
+    	<i class="bi bi-plus-circle me-1"></i> Nova Solicitação
+    </a>
   </div>
 
   <script>
