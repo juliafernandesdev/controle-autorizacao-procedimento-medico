@@ -56,7 +56,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: seu_usuario_aqui
-      POSTGRES_PASSWORD: sua_enha_aqui
+      POSTGRES_PASSWORD: sua_senha_aqui
       POSTGRES_DB: autorizador_procedimentos
     ports:
       - "5432:5432"
