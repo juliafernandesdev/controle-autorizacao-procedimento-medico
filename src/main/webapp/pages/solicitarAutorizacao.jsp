@@ -80,8 +80,8 @@
 			      dataType: 'json',
 			      success: function (resposta) {
 			        const mensagem = resposta.autorizado
-			          ? '<i class="bi bi-check-circle-fill text-success me-2"></i>' + resposta.motivoNegacao
-			          : '<i class="bi bi-x-circle-fill text-danger me-2"></i>' + resposta.motivoNegacao;
+			          ? resposta.motivoNegacao
+			          : resposta.motivoNegacao;
 			
 			        $('#modal-body').text(mensagem);
 			        const modal = new bootstrap.Modal(document.getElementById('resultadoModal'));

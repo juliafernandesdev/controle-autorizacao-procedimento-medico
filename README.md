@@ -27,6 +27,8 @@ Aplicativo Web em Java utilizando JSP (Java Server Pages), Servlets e PostgreSQL
 
 ## 🧪 Compilação e Execução
 
+* Após clonar o repositório, seguir os passos abaixo.
+
 ### 1. Compilar o projeto
 
 ```bash
@@ -45,7 +47,7 @@ target/controle-autorizacao-procedimento-medico.war
 
 #### A. Usando Docker Compose (para app + banco)
 
-Crie o seguinte arquivo `docker-compose.yml` na raiz do projeto:
+Verifique se o arquivo `docker-compose.yml` está na raiz do projeto. Se não estiver, ele deverá ser criado: :
 
 ```yaml
 version: '3.9'
@@ -86,7 +88,7 @@ networks:
 
 #### B. Dockerfile personalizado para WildFly
 
-Crie um arquivo `Dockerfile` na raiz do projeto com o conteúdo:
+Verifique se arquivo `Dockerfile`  está na raiz do projeto com o conteúdo abaixo. Se não estiver, ele deverá ser criado::
 
 ```Dockerfile
 FROM jboss/wildfly:36.0.1.Final
