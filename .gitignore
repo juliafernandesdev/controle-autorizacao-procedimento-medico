@@ -30,7 +30,7 @@ Thumbs.db
 logs/
 *.out
 
-# IntelliJ (caso alguém use)
+# IntelliJ
 .idea/
 *.iml
 *.ipr

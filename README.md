@@ -19,7 +19,7 @@ Aplicativo Web em Java utilizando JSP (Java Server Pages), Servlets e PostgreSQL
 * WildFly 36.0.1 (standalone)
 * PostgreSQL 17
 * Liquibase
-* Maven
+* Maven 3.9
 * Docker + Docker Compose
 * JQuery + Bootstrap
 
@@ -153,14 +153,17 @@ mvn liquibase:updateSQL
 
 ---
 
-## 📍 Endpoints (Front-end)
+## 📍 Endpoints
 
-| Caminho                                     | Função                                             |  
-| ------------------------------------------- | -------------------------------------------------- |
-| `/index.jsp`                             | Tela inicial                                       |
-| `/pages/solicitarAutorizacao.jsp`  | Formulário de solicitação de autorização           |
-| `/pages/historicoSolicitacoes.jsp` | Listagem do histórico de solicitações              |
-| `/pages/cadastrarNovaRegra.jsp`     | Cadastro de novas regras de autorização            |
+| Caminho                                     | Função                                                        |  
+| ------------------------------------------- | ------------------------------------------------------------- |
+| `/index.jsp`                             | Tela inicial                                                 |
+| `/SolicitarAutorizacaoController`  | Formulário de solicitação de autorização                     |
+| `/AutorizacaoController`             | Verificar a solicitação de autorização e retornar ao usuário |
+| `/HistoricoAutorizacaoController`  | Página da listagem do histórico de solicitações              |
+| `/ListarSolicitacoesController`    | Buscar todas as solicitações e retornar os dados para a view  |
+| `/CadastrarNovaRegraController`     | Formulário para cadastro de novas regras de autorização      |
+| `/CadastroRegraController`           | Cadastrar novas regras de autorização                        |
 
 ---
 
